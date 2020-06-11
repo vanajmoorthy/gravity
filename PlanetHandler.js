@@ -4,9 +4,9 @@ class PlanetHandler {
 		this.planetList = planetList;
 	}
 
-	getAcceleration(pos1, pos2, m2) {
+	getAcceleration(pos1, pos2, m) {
 		let distance = p5.Vector.dist(pos1, pos2);
-		let scalingFactor = (this.G * m2) / (distance * distance);
+		let scalingFactor = (this.G * m) / Math.pow(distance, 2);
 		let acc = p5.Vector.sub(pos2, pos1).normalize().mult(scalingFactor);
 
 		return acc;

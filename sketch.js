@@ -1,5 +1,4 @@
 function randomIntFromInterval(min, max) {
-	// min and max included
 	return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
@@ -13,7 +12,9 @@ let values = [
 
 console.log(values);
 
-let planetHandler = new PlanetHandler(5, [
+let bigG = 5;
+
+let planetHandler = new PlanetHandler(bigG, [
 	// format: (mass, [posx,posy,posz], [velx,vely,velz])
 	new Planet(1000, [0, 0, 0], [0, 0, 0]),
 	new Planet(50, [values[0], 0, 0], [0, values[1], 0]),
